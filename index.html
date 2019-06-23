@@ -1,20 +1,69 @@
 <!DOCTYPE html>
 <body>
   <div>
-    <h4>
-      API requests:
-    </h4>
-    <p>
-      GET <code>/api/employees</code> : Returns an array of all employees stored
-      in the DB<br /><br />
-      POST <code>/api/employee</code> : Creates a new employee on the database
-      from the request body<br /><br />
-      GET <code>/api/employee/:id</code> : Returns an individual employee
-      matching the id param<br />
-      PUT <code>/api/employee/:id</code> : Updates individual employee matching
-      the id param with data in the request body<br />
-      DELETE <code>/api/employee/:id</code> : Deletes the individual employee
-      matching the id param
-    </p>
+    <table style="border:1px solid black">
+      <tbody>
+        <tr style="border: 1px solid black;">
+          <th>
+            <h3>API requests:</h3>
+          </th>
+        </tr>
+        <tr style="border:1px solid black">
+          <th style="border:1px solid black">
+            Verb
+          </th>
+          <th style="border:1px solid black">
+            Path
+          </th>
+          <th style="border:1px solid black">
+            Function
+          </th>
+        </tr>
+        <tr style="border:1px solid black">
+          <td style="border:1px solid black">
+            GET
+          </td>
+          <td style="border:1px solid black">
+            <code>/api/employees</code>
+          </td>
+          <td style="border:1px solid black">
+            Returns an array of all employees stored on database
+          </td>
+        </tr>
+        <tr style="border:1px solid black">
+          <td style="border:1px solid black">
+            POST
+          </td>
+          <td style="border:1px solid black">
+            <code>/api/employee</code>
+          </td>
+          <td style="border:1px solid black">
+            Creates a new employee on the database from the request body
+          </td>
+        </tr>
+        <tr style="border:1px solid black">
+          <td style="border:1px solid black">GET</td>
+          <td style="border:1px solid black"><code>/api/employee/:id</code></td>
+          <td style="border:1px solid black">
+            Returns an individual employee matching the id param
+          </td>
+        </tr>
+        <tr style="border:1px solid black">
+          <td style="border:1px solid black">PUT</td>
+          <td style="border:1px solid black"><code>/api/employee/:id</code></td>
+          <td style="border:1px solid black">
+            Updates individual employee matching the id param with data in the
+            request body
+          </td>
+        </tr>
+        <tr style="border:1px solid black">
+          <td style="border:1px solid black">DELETE</td>
+          <td style="border:1px solid black"><code>/api/employee/:id</code></td>
+          <td style="border:1px solid black">
+            Deletes the individual employee matching the id param
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </body>
