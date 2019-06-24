@@ -5,9 +5,9 @@
   "main": "index.js",
   "proxy": "localhost:3001",
   "scripts": {
-    "dev": "nodemon server.js",
+    "dev": "nodemon index.js",
     "test": "test",
-    "start": "node server.js"
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
