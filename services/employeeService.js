@@ -24,7 +24,8 @@ module.exports = {
       const db = client.db('fcc-training');
       db.collection('employee')
         .findOne({ _id: new ObjectID(req.params.id) })
-        .then(response => res.json(response));
+        .then(response => res.json(response))
+        .catch(err => console.log(err));
     });
   },
 
