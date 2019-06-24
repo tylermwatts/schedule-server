@@ -9,18 +9,19 @@ module.exports = {
   getAllEmployees(req, res) {
     mongo.connect(url, { useNewUrlParser: true }, (err, client) => {
       assert.equal(null, err);
-      const db = client.db('employees');
+      const db = client.db('fcc-training');
       db.collection('employee')
         .find({})
         .toArray()
-        .then(response => res.json(response));
+        .then(response => res.json(response))
+        .catch(err => console.log(err));
     });
   },
 
   getEmployeeById(req, res) {
     mongo.connect(url, { useNewUrlParser: true }, (err, client) => {
       assert.equal(null, err);
-      const db = client.db('employees');
+      const db = client.db('fcc-training');
       db.collection('employee')
         .findOne({ _id: new ObjectID(req.params.id) })
         .then(response => res.json(response));
@@ -35,7 +36,7 @@ module.exports = {
     };
     mongo.connect(url, { useNewUrlParser: true }, (err, client) => {
       assert.equal(null, err);
-      const db = client.db('employees');
+      const db = client.db('fcc-training');
       db.collection('employee')
         .insertOne(employee)
         .then(res.json({ employee }));
@@ -48,7 +49,7 @@ module.exports = {
     const schedule = req.body.schedule;
     mongo.connect(url, { useNewUrlParser: true }, (err, client) => {
       assert.equal(null, err);
-      const db = client.db('employees');
+      const db = client.db('fcc-training');
       db.collection('employee')
         .findOneAndUpdate(
           { _id: new ObjectID(req.params.id) },
@@ -64,7 +65,7 @@ module.exports = {
     const employeeId = new ObjectID(req.params.id);
     mongo.connect(url, { useNewUrlParser: true }, (err, client) => {
       assert.equal(null, err);
-      const db = client.db('employees');
+      const db = client.db('fcc-training');
       db.collection('employee')
         .findOneAndDelete({ _id: employeeId })
         .then(foundEmployee => {
