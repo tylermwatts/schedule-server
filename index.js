@@ -7,7 +7,10 @@ const routeConfig = require('./routes');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(function(req, res, next) {
-  res.header('Access-Control-Allow-Origin', '*');
+  res.header(
+    'Access-Control-Allow-Origin',
+    'warpfox-schedule-client.herokuapp.com'
+  );
   res.header('Vary', 'Origin');
   res.header(
     'Access-Control-Allow-Headers',
