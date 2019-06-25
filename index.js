@@ -11,6 +11,7 @@ app.use(function(req, res, next) {
     'Access-Control-Allow-Origin',
     'https://warpfox-schedule-client.herokuapp.com/'
   );
+  res.header('Vary', 'Origin');
   res.header(
     'Access-Control-Allow-Headers',
     'Origin, X-Requested-With, Content-Type, Accept'
